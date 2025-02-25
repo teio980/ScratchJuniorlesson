@@ -47,4 +47,38 @@ body{
 .login{
     display: flex;
     flex-direction: column;
+    gap: 10px;
+}
+
+.login a{
+    text-decoration: none;
+}
+
+.login button{
+    width: 80%;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 550; 
+    align-self: center;
+}
+
+.login input{
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    font-size: 15px;
+    color: #fff;
+    padding: 5px 5px 5px 5px;
+}
+
+.login span{
+    font-size: 18px;
 }
