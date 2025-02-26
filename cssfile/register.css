@@ -13,25 +13,13 @@ body{
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
 }
 
-.left{
-    display: flex;
-    background-color: red;
-    border-radius: 10px;
-    border-color: black;
-    border: 1px solid;
-    margin: 5% 2px 5% 1%;
-    width: 40%;
-    height: 80%;
-}
-
-.right{
+.form{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,23 +28,19 @@ body{
     border-color: black;
     border: 1px solid;
     margin: 5% 1% 5% 2px;
-    width: 50%;
-    height: 80%;
+    width: 66%;
+    height: 70%;
 }
 
-.login{
+.Register_form{
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 35%;
 }
 
-.login a{
-    text-decoration: none;
-}
-
-.login button{
-    width: 80%;
+.Register_form button{
+    width: 50%;
     background: #fff;
     border: none;
     outline: none;
@@ -69,7 +53,7 @@ body{
     align-self: center;
 }
 
-.login input{
+.Register_form input{
     background: transparent;
     border: none;
     outline: none;
@@ -80,17 +64,6 @@ body{
     padding: 5px 5px 5px 5px;
 }
 
-.login span{
+.Register_form span{
     font-size: 18px;
-}
-
-.link{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    width: 100%;
 }
