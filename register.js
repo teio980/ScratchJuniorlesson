@@ -10,6 +10,7 @@ function checkPassword(){
     } else {
         if (condition.test(password)) {
             console.log("密码有效！");
+            return true;
         } else {
             console.log("密码不符合要求！");
         }

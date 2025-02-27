@@ -3,22 +3,27 @@ include 'connect_DB.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {  
     try {
-    $username = $_POST["U_Username"];  
-    $email = $_POST["U_Email"];
-    $password = $_POST["U_Password"];  
+        $username = $_POST["U_Username"];  
+        $email = $_POST["U_Email"];
+        $password = $_POST["U_Password"];  
 
-    $sql = "INSERT INTO student (S_Username, S_Password ,S_Mail) VALUES ( :name, :password , :email )";
-    $stmt = $pdo->prepare($sql);
+        $checkSql = "SELECT S_Username FROM student WHERE S_Username = :username";
+        $checkStmt = $pdo->prepare($checkSql);
+        $checkStmt->bindParam(':username', $username);
+        $checkStmt->execute();
 
-    $stmt->bindParam(':name', $username);
-    $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':password', $password);
+        if($checkStmt->rowCount() > 0){
 
-   
-    $stmt->execute();
+        }else{
+            $insertSql = "INSERT INTO student (S_Username, S_Password ,S_Mail) VALUES ( :name, :password , :email )";
+            $insertStmt = $pdo->prepare($insertSql);
 
-        echo "Data inserted successfully!";
-
+            $insertStmt->bindParam(':name', $username);
+            $insertStmt->bindParam(':email', $email);
+            $insertStmt->bindParam(':password', $password);
+            $insertStmt->execute(); 
+        }
+        
     } catch (PDOException $e) {
         echo "Connection Failed:" . $e->getMessage();
     }
