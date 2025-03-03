@@ -11,11 +11,11 @@
         <div class="left"><img src="" alt=""></div>
         <div class="right" >
             <div class="login">
-                <form action="" method="POST">
+                <form action="includes/loginFunction.php" method="POST" >
                     <span>Username</span>
-                    <input type="text" id="U_Username" placeholder="Username" required>
+                    <input type="text"  name="U_Username" id="U_Username" placeholder="Username" required>
                     <span>Password</span>
-                    <input type="password" id="U_Password" placeholder="Password" required>
+                    <input type="password" name="U_Password" id="U_Password" placeholder="Password" required>
                     <div class="link">
                     <a href="">Forgot Password?</a>
                     <a href="register.html">Register</a>

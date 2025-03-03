@@ -10,11 +10,11 @@
 <body>
     <div class="main">
         <div class="form" >
-            <form class="Register_form" onsubmit="return checkPassword()" action="includes/register.php" method="POST">
+            <form class="Register_form" onsubmit="return checkPassword()" action="includes/registerFunction.php" method="POST">
                 <span>Username:</span>
                 <input type="text" id="U_Username" name="U_Username" placeholder="Username">
                 <span>Email:</span>
-                <input type="email" id="U_Email" name="U_Email" placeholder="e.g.: abc123@gmail.com">
+                <input type="email" id="U_Email" name="U_Email" placeholder="e.g.: abc123@gmail.com" oninput="checkEmail()">
                 <span>Password:</span>
                 <input type="password" id="U_Password" name="U_Password" placeholder="Password">
                 <span>Confirmed Password:</span>
