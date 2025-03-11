@@ -67,3 +67,9 @@ body{
 .Register_form span{
     font-size: 18px;
 }
+
+p{
+    color: red;
+    display: block;
+    margin: 0px;
+}

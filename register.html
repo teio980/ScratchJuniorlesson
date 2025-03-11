@@ -5,23 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cssfile/register.css">
     <title>Register</title>
-    <script src="register.js" defer></script>
 </head>
 <body>
     <div class="main">
         <div class="form" >
-            <form class="Register_form" onsubmit="return checkPassword()" action="includes/registerFunction.php" method="POST">
-                <span>Username:</span>
+            <form class="Register_form" action="includes/registerFunction.php" method="POST">
+                
+                <label for="U_Username">Username:</label>
                 <input type="text" id="U_Username" name="U_Username" placeholder="Username">
-                <span>Email:</span>
-                <input type="email" id="U_Email" name="U_Email" placeholder="e.g.: abc123@gmail.com" oninput="checkEmail()">
-                <span>Password:</span>
+                <p id="errMessage_Username">Username is required</p>
+
+                <label for="U_Email">Email:</label>
+                <input type="email" id="U_Email" name="U_Email" placeholder="e.g.: abc123@gmail.com">
+                <p id="errMessage_Email" >Email is required</p>
+
+                <label for="U_Password">Password:</label>
                 <input type="password" id="U_Password" name="U_Password" placeholder="Password">
-                <span>Confirmed Password:</span>
+                <p id="errMessage_Password">Password is required</p>
+
+                <label for="U_Confirmed_Password">Confirmed Password:</label>
                 <input type="password" id="U_Confirmed_Password" placeholder="Password">
+                <p id="errMessage_Confirmed_Password">Confirmed Password is required</p>
+
                 <button type="submit">Register</button>
             </form>
         </div>
     </div>
+    <script src="register.js"></script>
 </body>
 </html>

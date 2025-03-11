@@ -17,7 +17,7 @@
                     <span>Password</span>
                     <input type="password" name="U_Password" id="U_Password" placeholder="Password" required>
                     <div class="link">
-                    <a href="">Forgot Password?</a>
+                    <a href="forgotPassword.php">Forgot Password?</a>
                     <a href="register.html">Register</a>
                     </div>
                     <button type="submit">login</button>

@@ -1,4 +1,23 @@
-function checkPassword(){
+function checkInput(inputId, errMessageId){
+    const input = document.getElementById(inputId);
+    const errMessage = document.getElementById(errMessageId);
+
+    input.addEventListener("input", function () {
+        if (input.value.trim() === '') {
+            errMessage.style.display = 'block'; 
+        } else {
+            errMessage.style.display = 'none'; 
+        }
+    });
+}
+
+checkInput('U_Username', 'errMessage_Username');
+checkInput('U_Email', 'errMessage_Email');
+checkInput('U_Password', 'errMessage_Password');
+checkInput('U_Confirmed_Password', 'errMessage_Confirmed_Password');
+
+
+/*function checkPassword(){
     let password = document.getElementById("U_Password").value;
     let C_password = document.getElementById("U_Confirmed_Password").value;
     const condition = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{6,}$/;
@@ -28,4 +47,4 @@ function checkEmail(){
     } else {
         return false;
     }
-}
+}*/
